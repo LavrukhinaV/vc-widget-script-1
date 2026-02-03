@@ -121,7 +121,7 @@
   "hideselectors": false,
   "masterServiceId": "cbbb9a75-810f-4801-98ac-f3030e272862",
   "publicOfferLink": "https://#",
-  "staticWidgetMode": false,
+  "staticWidgetMode": true,
   "displayCostOfSlot": true,
   "timeBeforeBooking": [
     {
