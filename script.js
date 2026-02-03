@@ -10,10 +10,10 @@
   let loader
 
   function addLoaderStyles() {
-    if (d.getElementById('vc-widget-loader-styles')) return
+    if (d.getElementById('vc-widget-loader-styles-inline')) return
 
     const style = d.createElement('style')
-    style.id = 'vc-widget-loader-styles'
+    style.id = 'vc-widget-loader-styles-inline'
     style.innerHTML = `
       :root {
         --accent-color: #95b700;
