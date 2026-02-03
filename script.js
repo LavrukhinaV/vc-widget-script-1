@@ -77,41 +77,13 @@
 
   d.addEventListener('click', function (e) {
     const target = e.target;
-    const link = target && target.closest ? target.closest('a[href^="#booking"]') : null;
+    const link = target && target.closest ? target.closest('a[href^="#XoZ5"]') : null;
     if (link && !isWidgetReady) showLoader();
   }, true);
 
   addLoaderStyles()
 
-  js = d.createElement(s);
-  fjs = document.currentScript || d.getElementsByTagName(s)[0];
-  js.id = o;
-  js.src = f;
-  js.defer = true;
-
-  js.onload = function () {
-    isWidgetReady = true;
-    hideLoader();
-  };
-
-  js.onerror = function () {
-    hideLoader();
-  };
-
-  fjs.parentNode.insertBefore(js, fjs);
-})(window, document, 'script', 'booking', 'https://cabinet.vivacrm.ru/widget.js');
-
-// Конфигурация и инициализация СНАРУЖИ onload (через очередь команд)
-function onDomReady(cb) {
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', cb, { once: true });
-  } else {
-    cb();
-  }
-}
-
-onDomReady(function() {
-  window['booking']('init', {
+    w[o]('init', {
   "theme": "light",
   "blocks": [],
   "channel": "cascade",
@@ -119,7 +91,7 @@ onDomReady(function() {
   "darkLogo": "",
   "language": "ru",
   "lightLogo": "",
-  "tenantKey": "l8jvFs",
+   "tenantKey": "l8jvFs",
   "ymEventId": "103926753",
   "vocabulary": {
     "room": "зал",
@@ -135,9 +107,9 @@ onDomReady(function() {
   "displaySteps": true,
   "userContacts": {
     "requestLastName": true,
-    "lastNameRequired": false,
+    "lastNameRequired": true,
     "requestFirstName": true,
-    "firstNameRequired": false
+    "firstNameRequired": true
   },
   "widgetStyles": {
     "fontFamily": "Onest",
@@ -148,13 +120,23 @@ onDomReady(function() {
   },
   "hideselectors": false,
   "masterServiceId": "cbbb9a75-810f-4801-98ac-f3030e272862",
-  "publicOfferLink": "https://padelnok.ru/public_offer",
+  "publicOfferLink": "https://#",
   "staticWidgetMode": false,
   "displayCostOfSlot": true,
   "timeBeforeBooking": [
     {
       "id": "1",
-      "time": 0,
+      "time": 180,
+      "timeWithoutTrainer": 0
+    },
+    {
+      "id": "2a70d953-8825-4490-b206-039441650695",
+      "time": 180,
+      "timeWithoutTrainer": 0
+    },
+    {
+      "id": "d3f776d9-a123-40f0-80bb-ab2a7b0b9680",
+      "time": 180,
       "timeWithoutTrainer": 0
     }
   ],
@@ -165,7 +147,25 @@ onDomReady(function() {
   "hideSelectedOptions": false,
   "preventIsolatedSlots": false,
   "expandSlotsToMinDuration": true,
-  "slotPriceWithoutGradeImpact": false,
-  "personalDataProcessingPolicyLink": "https://padelnok.ru/public_offer"
+  "slotPriceWithoutGradeImpact": true,
+  "personalDataProcessingPolicyLink": "https://#"
 });
-});
+
+  js = d.createElement(s);
+  fjs = document.currentScript || d.getElementsByTagName(s)[0];
+  js.id = o;
+  js.src = f;
+
+  js.async = false;
+
+  js.onload = function () {
+    isWidgetReady = true;
+    hideLoader();
+  };
+
+  js.onerror = function () {
+    hideLoader();
+  };
+
+  fjs.parentNode.insertBefore(js, fjs);
+})(window, document, 'script', 'booking', 'https://dev.cabinet.vivacrm.ru/widget.js');
