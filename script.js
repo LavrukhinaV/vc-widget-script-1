@@ -168,4 +168,4 @@
   };
 
   fjs.parentNode.insertBefore(js, fjs);
-})(window, document, 'script', 'booking', 'https://dev.cabinet.vivacrm.ru/widget.js');
+})(window, document, 'script', 'booking', 'https://cabinet.vivacrm.ru/widget.js');
