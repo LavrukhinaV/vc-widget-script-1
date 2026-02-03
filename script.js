@@ -177,4 +177,4 @@
   }
 
   fjs.parentNode.insertBefore(js, fjs)
-})(window, document, 'script', 'XoZ5', 'https://cabinet.vivacrm.ru/widget.js')
+})(window, document, 'script', 'XoZ51', 'https://cabinet.vivacrm.ru/widget.js')
