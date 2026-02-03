@@ -45,7 +45,7 @@
       }
 
       .vc-widget-loader-container--inline {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
         vertical-align: middle;
