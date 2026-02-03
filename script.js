@@ -44,7 +44,7 @@
         mask-composite: exclude;
       }
 
-      .vc-widget-loader-container {
+      .vc-widget-loader-container--inline {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -61,7 +61,7 @@
     if (loader) return
 
     loader = d.createElement('div')
-    loader.className = 'vc-widget-loader-container'
+    loader.className = 'vc-widget-loader-container--inline'
     loader.innerHTML = '<div class="vc-widget-loader"></div>'
     console.log('d.body', d.body)
 
